@@ -127,7 +127,7 @@ public class AirbrakeNoticeBuilder {
 
 	private void errorClass(Throwable throwable) {
 		this.errorClass = throwable.getClass().getName();
-		if (errorMessage == null || errorMessage.trim().isEmpty()) {
+		if (errorMessage == null || errorMessage.trim().length() == 0) {
 			errorMessage = '[' + throwable.getClass().toString() + ']';
 		}
 	}
